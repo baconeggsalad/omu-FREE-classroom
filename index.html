@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMU空き教室情報</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <div class="site-name">
+            <img src="school_logo.jpg" alt="School-Logo">
+            <div class="site-contents">
+                <h1>大阪公立大学空き教室情報</h1>
+                <h3>Osaka Metropolitan University FREE Classroom Information Site</h3>
+            </div>
+        </div>
+        <div class="menu-btn">
+            <!-- メニューボタンのアイコン -->
+            <img src="menu-btn06.png" alt="Menu=Icon">
+        </div>
+        <div class="menu-bar">
+            <!-- メニューバーの内容をここに記述 -->
+            <ul>
+                <li  class="main-menu-item" id="annual-schedule">
+                    <a href="#">年間行事予定</a>
+                    <div id="annualScheduleImageContainer"></div>
+                </li>
+                <li class="main-menu-item" id="library">
+                    <a href="#">図書館開館時間</a>
+                </li>
+                <li>
+                    <a href="#">生協営業時間</a>
+                </li>
+                <li>
+                    <a href="#">食堂利用可能時間</a>
+                </li>
+                <li class="main-menu-item" id="buildA">
+                    <a href="#">A棟<span class="plus">+</span></a>
+                    <ul class="sub-menu" id="subMenuA">
+                        <li id="a10"><a href="#">A10</a></li>
+                        <li id="a11"><a href="#">A11</a></li>
+                        <li><a href="#">A12</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu-item" id="buildB">
+                    <a href="#">B棟<span class="plus">+</span></a>
+                    <ul class="sub-menu" id="subMenuB">
+                        <li>B1</li>
+                        <li>B2</li>
+                        <li>B3</li>
+                        <li>B4</li>
+                        <li>B5</li>
+                        <li>B6</li>
+                        <li>B7</li>
+                        <li>B8</li>
+                        <li>B9</li>
+                        <li>B10</li>
+                        <li>B10-2</li>
+                        <li>B11</li>
+                        <li>B11-2</li>
+                        <li>B12</li>
+                        <li>B13</li>
+                        <li>B14</li>
+                        <li>B15</li>
+                        <li>B16</li>
+                        <li>B17</li>
+                    </ul>
+                </li>
+                <li class="main-menu-item" id="buildC">
+                    <a href="#">C棟<span class="plus">+</span></a>
+                    <ul class="sub-menu" id="subMenuC">
+                        <li>C1</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="content">
+        <div class="infoBar" id="infoBar">
+            <div class="buildingInfo" id="buildingInfo">
+                <!-- ここに教室情報が表示されます -->
+            </div>
+        </div>
+        
+        <div class="mapContainer">
+            <img src="map.jpg" alt="Map Image">
+            <div class="overlay" id="overlay">
+                <div class="A">
+                    <input type="button" id="A10" class="text A" value="A10">
+                    <input type="button" id="A11" class="text A" value="A11">
+                    <input type="button" id="A12" class="text A" value="A12">
+                    <input type="button" id="A13" class="text A" value="A13">
+                    <input type="button" id="A14" class="text A" value="A14">
+                    <input type="button" id="A15" class="text A" value="A15">
+                    <input type="button" id="A3" class="text A" value="A3">
+                    <input type="button" id="A4" class="text A" value="A4">
+                    <input type="button" id="A5" class="text A" value="A5">
+                    <input type="button" id="A5-2" class="text A" value="A5-2">
+                    <input type="button" id="A6" class="text A" value="A6">
+                    <input type="button" id="A7" class="text A" value="A7">
+                    <input type="button" id="A8" class="text A" value="A8">
+    
+                </div>
+                <div class="B">
+                    <input type="button" id="B1" class="text B" value="B1">
+                    <input type="button" id="B2" class="text B" value="B2">
+                    <input type="button" id="B3" class="text B" value="B3">
+                    <input type="button" id="B4" class="text B" value="B4">
+                    <input type="button" id="B5" class="text B" value="B5">
+                    <input type="button" id="B6" class="text B" value="B6">
+                    <input type="button" id="B7" class="text B" value="B7">
+                    <input type="button" id="B8" class="text B" value="B8">
+                    <input type="button" id="B9" class="text B" value="B9">
+                    <input type="button" id="B10" class="text B" value="B10">
+                    <input type="button" id="B10-2" class="text B" value="B10-2">
+                    <input type="button" id="B11" class="text B" value="B11">
+                    <input type="button" id="B11-2" class="text B" value="B11-2">
+                    <input type="button" id="B12" class="text B" value="B12">
+                    <input type="button" id="B13" class="text B" value="B13">
+                    <input type="button" id="B14" class="text B" value="B14">
+                    <input type="button" id="B15" class="text B" value="B15">
+                    <input type="button" id="B16" class="text B" value="B16">
+                    <input type="button" id="B17" class="text B" value="B17">
+                </div>
+                <div class="C">
+                    <input type="button" id="C1" class="text C" value="C1">
+                    <input type="button" id="C2" class="text C" value="C2">
+                    <input type="button" id="C3" class="text C" value="C3">
+                    <input type="button" id="C4" class="text C" value="C4">
+                    <input type="button" id="C5" class="text C" value="C5">
+                    <input type="button" id="C6" class="text C" value="C6">
+                    <input type="button" id="C7" class="text C" value="C7">
+                    <input type="button" id="C7-2" class="text C" value="C7-2">
+                    <input type="button" id="C8" class="text C" value="C8">
+                    <input type="button" id="C9" class="text C" value="C9">
+                    <input type="button" id="C10" class="text C" value="C10">
+                    <input type="button" id="C11" class="text C" value="C11">
+                    <input type="button" id="C12" class="text C" value="C12">
+                    <input type="button" id="C13" class="text C" value="C13">
+                    <input type="button" id="C14" class="text C" value="C14">
+                    <input type="button" id="C15" class="text C" value="C15">
+                    <input type="button" id="C16" class="text C" value="C16">
+                    <input type="button" id="C17" class="text C" value="C17">
+                    <input type="button" id="C18" class="text C" value="C18">
+                    <input type="button" id="C19" class="text C" value="C19">
+                    <input type="button" id="C20" class="text C" value="C20">
+                    <input type="button" id="C21" class="text C" value="C21">
+                    <input type="button" id="C22" class="text C" value="C22">
+                    <input type="button" id="C23" class="text C" value="C23">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">上に戻る</button>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
