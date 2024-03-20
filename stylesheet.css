@@ -1,0 +1,807 @@
+ /* 画面全体のスタイル */
+ body {
+    margin: 0;
+    padding: 0;
+ }
+
+
+
+
+
+
+
+
+
+
+ header {
+    display: flex;
+    background-color: white;
+}
+.site-name {
+    display: flex;
+    align-items: center; /* アイテムを垂直方向に中央揃え */
+}
+
+.site-name img {
+    padding: 1vw;
+    width: 5%;
+    object-fit: contain;
+}
+.site-contents {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.site-name h1 {
+    font-size: 2.5vw;
+    font-weight: normal;
+    font-family: 'sans-serif';
+    padding-top: 0.5vw;
+}
+.site-name h3 {
+    font-size: 1vw;
+    font-family: serif;
+    margin: 0;
+    padding-left: 1vw;
+    padding-top: 1vw;
+}
+
+h2{
+    font-weight: lighter;
+}
+p{
+    font-weight: bold;
+}
+
+
+
+/* メニューバーのスタイル */
+.menu-btn img{
+    cursor: pointer;
+    width: 14%;
+    height: auto;
+    object-fit: contain;
+    float: right;
+    padding-top: 2.0vw;
+    padding-right: 1.5vw;
+}
+.menu-bar {
+    display: none; 
+    position: absolute;
+    top: 7vw;
+    width: 200px;
+    right: 0;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    z-index: 1;
+    font-family: 'sans-serif';
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-height: calc(100% - 8vw);
+    overflow-y: auto;
+}
+.menu-bar ul{
+    padding:0;
+    margin: 1vw;
+    list-style-type: none;
+}  
+.menu-bar ul li:hover > a {
+    background-color: rgb(198, 198, 198);
+    color: black;
+    border-radius: 5px;
+    display: block;
+}
+.menu-bar ul li {
+    padding: 10px 1vw;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+}
+.menu-bar ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li a {
+    padding: 4px 4px;
+    color: black;
+    text-decoration: none;
+}
+.main-menu-item a {
+    position: relative;
+}
+.plus{
+    float: right;
+    padding-right: 2vw;
+    font-weight: bold;
+}
+
+
+
+/*サブメニュー*/
+.sub-menu{
+    display: none;
+    cursor: pointer;
+}
+
+/* サブメニューのホバースタイル */
+.menu-bar .sub-menu ul li:hover > a {
+    background-color: #555;
+    color: #fff;
+}
+
+#annualScheduleImageContainer img {
+    position: fixed;
+    top: 50%; /* 画面の中央に配置 */
+    left: 50%; /* 画面の中央に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    max-width: 100%; /* 画像の幅が画面に収まるように */
+    max-height: 100%; /* 画像の高さが画面に収まるように */
+    background-color: rgba(0, 0, 0, 0.8); /* 画像以外の背景 */
+    z-index: 12; /* 画像を最前面に表示 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/*headerの下のスタイル*/
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 100%;
+    width:100%;
+}
+/* 空き教室情報のバーのスタイル */
+.infoBar {
+    flex: 1;
+    max-width: 15%;
+    overflow-y: auto;
+    background-color: rgb(238, 238, 238);
+    border: 3.2px solid #777777;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.3) 0 0 5px;
+}
+/* 棟の情報のスタイル */
+.buildingInfo {
+    color: black;
+    padding-left: 1vw;
+}
+.inUse {
+    color: red;
+}
+.vacant {
+    color: blue;
+}
+/* マップ画像のスタイル */
+.mapContainer {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    padding-left: 0.5vw;
+}
+/* マップ画像のスタイル */
+.mapContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border:3.2px solid #777777;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:rgba(0, 0, 0, 0.5) 0 0 5px;
+}
+/* ボタンのスタイル */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ボタン内の文字のスタイル */
+.text {
+    position: absolute;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 2vw;
+    border-width: 1px;
+    border-radius: 10vw;
+}
+
+
+    
+
+
+
+.A {
+    background-color: #FF8156;
+    color: black;
+}
+.A:hover{
+    background-color: #e74b18;
+}
+#A10{
+    top: 60.5%;
+    left: 87%;
+}
+#A11{
+    top:75%;
+    left:84%;
+}
+#A12{
+    top: 74%;
+    left: 75.5%;
+}
+#A13{
+    top: 76%;
+    left: 79.5%;
+}
+#A14{
+    top: 76%;
+    left: 71.5%;
+}
+#A15{
+    top: 76%;
+    left: 66.5%;
+}
+#A3{
+    top:55%;
+    left:57%;
+}
+#A4{
+    top: 53%;
+    left: 61%;
+}
+#A5{
+    top: 60.5%;
+    left: 70%;
+}
+#A5-2{
+    top: 56%;
+    left: 73%;
+}
+#A6{
+    top: 62%;
+    left: 75.5%;
+}
+#A7{
+    top: 55%;
+    left: 79%;
+}
+#A8{
+    top: 57.5%;
+    left: 83%;
+}
+
+
+.B {
+    background-color:#6bd0e5;
+    color:black;
+}
+.B:hover{
+    background-color: #00add0ea;;
+}
+#B1{
+    top: 41%;
+    left: 57%;
+}
+#B2{
+    top: 33%;
+    left: 58%;
+}
+#B3{
+    top: 23.2%;
+    left: 58.3%;
+}
+#B4{
+    top: 12.3%;
+    left: 62%;
+}
+#B5{
+    top: 23%;
+    left: 72%;
+}
+#B6{
+    top: 16.5%;
+    left: 72%;
+}
+#B7{
+    top: 9.5%;
+    left: 71%;
+}
+#B8{
+    top: 13.55%;
+    left: 74.6%;
+}
+#B9{
+    top: 9.3%;
+    left: 75.35%;
+}
+#B10{
+    top: 12%;
+    left: 80%;
+}
+#B10-2{
+    top: 5.2%;
+    left: 74%;
+}
+#B11{
+    top: 32%;
+    left: 82%;
+}
+#B11-2{
+    top: 31%;
+    left: 88%;
+}
+#B12{
+    top: 38%;
+    left: 67%;
+}
+#B13{
+    top: 34%;
+    left: 64%;
+}
+#B14{
+    top: 49.5%;
+    left: 66%;
+}
+#B15{
+    top: 43%;
+    left: 68%;
+}
+#B16{
+    top: 29%;
+    left: 68%;
+}
+#B17{
+    top: 9%;
+    left: 84.5%;
+}
+
+.C{
+    background-color: #FFFF66;
+    color:black;
+
+}
+.C:hover{
+    background-color: #d0d00c;
+}
+#C1{
+    top: 57.5%;
+    left: 52.5%;
+}
+#C2{
+    top: 59.5%;
+    left: 47.3%;
+}
+#C3{
+    top: 52.6%;
+    left: 48%;
+}
+#C4{
+    top: 40.3%;
+    left: 48.3%;
+}
+#C5{
+    top: 30.3%;
+    left: 45.8%;
+}
+#C6{
+    top: 41.5%;
+    left: 45%;
+}
+#C7{
+    top: 40%;
+    left: 36.5%;
+}
+#C7-2{
+    top: 40%;
+    left: 41.8%;
+}
+#C8{
+    top: 36.5%;
+    left: 30%;
+}
+#C9{
+    top: 43%;
+    left: 24%;
+}
+#C10{
+    top: 49%;
+    left: 28%;
+}
+#C11{
+    top: 52%;
+    left: 23%;
+}
+#C12{
+    top: 47%;
+    left: 17.5%;
+}
+#C13{
+    top: 56.5%;
+    left: 15%;
+}
+#C14{
+    top: 63.7%;
+    left: 15.4%;
+}
+#C15{
+    top: 61.2%;
+    left: 19.5%;
+}
+#C16{
+    top: 57.2%;
+    left: 21.1%;
+}
+#C17{
+    top: 30%;
+    left: 36.4%;
+}
+#C18{
+    top: 19%;
+    left: 40%;
+}
+#C19{
+    top: 18%;
+    left: 29%;
+}
+#C20{
+    top: 23%;
+    left: 38.3%;
+}
+#C21{
+    top: 23%;
+    left: 35%;
+}
+#C22{
+    top: 25%;
+    left: 30.5%;
+}
+#C23{
+    top: 65.8%;
+    left: 19.0%;
+}
+
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+#scrollToTopBtn:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/*画面の大きさが変わったときの調整*/
+@media (max-width:1100px) {
+    .content {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .infoBar {
+        max-width: 99%;
+        width: 100%;
+        margin-top:0.7vw;
+        margin-left: 0.3vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*スマホ版*/
+@media only screen and (max-width: 700px) {
+    .content{
+        width:100%;
+    }
+    .infoBar {
+        max-width: 98%;
+        width: 100%;
+    }
+    .mapContainer {
+        overflow-x: scroll; /* 横スクロールを有効にする */
+        width: 100%; /* 画面幅全体に設定 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scroll-snap-type: x mandatory;
+    }
+    .mapContainer img {
+        width: 200%;
+        position: relative; /* 画像の位置を調整するために追加 */
+        left: 50%; /* 画像の左端を画面の中央に移動 */
+    }
+
+    .site-name img {
+        padding: 1vw;
+        width: 8%;
+        object-fit: contain;
+    }
+    .site-contents {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .site-name h1 {
+        font-size: 3.3vw;
+        font-weight: bold;
+        padding-top: 3px;
+        margin: 0;
+    }
+    
+    .site-name h3 {
+        font-size: 1.5vw;
+        margin: 0;
+        padding:0;
+    }
+
+    #A10{
+        top: 60.5%;
+        left: 173%;
+    }
+    #A11{
+        top:75%;
+        left:168%;
+    }
+    #A12{
+        top: 74%;
+        left: 150%;
+    }
+    #A13{
+        top: 76%;
+        left: 159%;
+    }
+    #A14{
+        top: 76%;
+        left: 143%;
+    }
+    #A15{
+        top: 76%;
+        left: 133%;
+    }
+    #A3{
+        top:55%;
+        left:114%;
+    }
+    #A4{
+        top: 53%;
+        left: 122%;
+    }
+    #A5{
+        top: 60.5%;
+        left: 140%;
+    }
+    #A5-2{
+        top: 56%;
+        left: 146%;
+    }
+    #A6{
+        top: 62%;
+        left: 151%;
+    }
+    #A7{
+        top: 55%;
+        left: 158%;
+    }
+    #A8{
+        top: 57.5%;
+        left: 166%;
+    }
+
+
+    #B1{
+        top: 41%;
+        left: 114%;
+    }
+    #B2{
+        top: 33%;
+        left: 116%;
+    }
+    #B3{
+        top: 23.2%;
+        left: 116.6%;
+    }
+    #B4{
+        top: 12.3%;
+        left: 124%;
+    }
+    #B5{
+        top: 23%;
+        left: 144%;
+    }
+    #B6{
+        top: 16.5%;
+        left: 144%;
+    }
+    #B7{
+        top: 9.5%;
+        left: 142%;
+    }
+    #B8{
+        top: 13.55%;
+        left: 149.2%;
+    }
+    #B9{
+        top: 9.3%;
+        left: 150.7%;
+    }
+    #B10{
+        top: 12%;
+        left: 160%;
+    }
+    #B10-2{
+        top: 5.2%;
+        left: 148%;
+    }
+    #B11{
+        top: 32%;
+        left: 164%;
+    }
+    #B11-2{
+        top: 31%;
+        left: 176%;
+    }
+    #B12{
+        top: 38%;
+        left: 134%;
+    }
+    #B13{
+        top: 34%;
+        left: 128%;
+    }
+    #B14{
+        top: 49.5%;
+        left: 132%;
+    }
+    #B15{
+        top: 43%;
+        left: 136%;
+    }
+    #B16{
+        top: 29%;
+        left: 136%;
+    }
+    #B17{
+        top: 9%;
+        left: 169%;
+    }
+
+
+
+
+    #C1{
+        top: 57.5%;
+        left: 105%;
+    }
+    #C2{
+        top: 59.5%;
+        left: 94.6%;
+    }
+    #C3{
+        top: 52.6%;
+        left: 96%;
+    }
+    #C4{
+        top: 40.3%;
+        left: 96.6%;
+    }
+    #C5{
+        top: 30.3%;
+        left: 91.6%;
+    }
+    #C6{
+        top: 41.5%;
+        left: 90%;
+    }
+    #C7{
+        top: 40%;
+        left: 73%;
+    }
+    #C7-2{
+        top: 40%;
+        left: 83.6%;
+    }
+    #C8{
+        top: 36.5%;
+        left: 60%;
+    }
+    #C9{
+        top: 43%;
+        left: 48%;
+    }
+    #C10{
+        top: 49%;
+        left: 56%;
+    }
+    #C11{
+        top: 52%;
+        left: 46%;
+    }
+    #C12{
+        top: 47%;
+        left: 35%;
+    }
+    #C13{
+        top: 56.5%;
+        left: 30%;
+    }
+    #C14{
+        top: 63.7%;
+        left: 30.8%;
+    }
+    #C15{
+        top: 61.2%;
+        left: 39%;
+    }
+    #C16{
+        top: 57.2%;
+        left: 42.2%;
+    }
+    #C17{
+        top: 30%;
+        left: 72.8%;
+    }
+    #C18{
+        top: 19%;
+        left: 80%;
+    }
+    #C19{
+        top: 18%;
+        left: 58%;
+    }
+    #C20{
+        top: 23%;
+        left: 76.6%;
+    }
+    #C21{
+        top: 23%;
+        left: 70%;
+    }
+    #C22{
+        top: 25%;
+        left: 61%;
+    }
+    #C23{
+        top: 65.8%;
+        left: 38%;
+    }
+}
+
+
+
+
+
+
+
